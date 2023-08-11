@@ -18,6 +18,7 @@
   "author": "YesayaS",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.4.0",
     "electron": "^25.5.0"
   },
   "devDependencies": {
