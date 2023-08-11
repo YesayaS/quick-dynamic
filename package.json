@@ -1,0 +1,26 @@
+{
+  "name": "quick-dynamic",
+  "version": "1.0.0",
+  "description": "Multiple tools for windows OS",
+  "main": "main.js",
+  "scripts": {
+    "start": "set NODE_ENV=development&&electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/YesayaS/quick-dynamic"
+  },
+  "keywords": [
+    "windows",
+    "tools"
+  ],
+  "author": "YesayaS",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^25.5.0"
+  },
+  "devDependencies": {
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}
