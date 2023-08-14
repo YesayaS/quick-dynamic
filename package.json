@@ -2,7 +2,7 @@
   "name": "quick-dynamic",
   "version": "1.0.0",
   "description": "Multiple tools for windows OS",
-  "main": "main.js",
+  "main": "app/main.js",
   "scripts": {
     "start": "set NODE_ENV=development&&electron .",
     "test": "echo \"Error: no test specified\" && exit 1"

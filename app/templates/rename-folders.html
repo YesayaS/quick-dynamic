@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick-Dynamic</title>
+  <!-- <link rel="stylesheet" href="../static/dist/style.css" /> -->
+  <!-- <link rel="stylesheet" href="../static/style.css" /> -->
+</head>
+
+<body>
+  <div class="flex font-mono">
+    <div class="p-9">
+      <div class="text-2xl">Quick Dynamic</div>
+      <div>Rename Folders</div>
+    </div>
+    <div class="p-9">
+      <div>Rename Folder</div>
+      <div>
+        <div>Name format :</div>
+        <div><input type="text" id="name-format" value="" /></div>
+        <div>Unique ID format :</div>
+        <div>format : [name] {id} [name]</div>
+        <div>
+          <label for="">Folder Path: </label><input type="text" id="directory-input" value="" />
+          <button id="directory-button">Folder Directory</button>
+        </div>
+        <div><button id="convert">convert!</button></div>
+      </div>
+    </div>
+  </div>
+  <script src="../static/js/code.jquery.com_jquery-3.7.0.js"></script>
+  <script src="../static/js/rename-folders.js"></script>
+</body>
+
+</html>
