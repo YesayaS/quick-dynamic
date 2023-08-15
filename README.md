@@ -1,2 +1,2 @@
-# quick-dynamic
+# [WIP] quick-dynamic
 Multiple tools for windows OS
