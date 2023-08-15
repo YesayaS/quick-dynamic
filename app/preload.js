@@ -2,7 +2,7 @@ const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("api", {
   selectFolder: () => ipcRenderer.invoke("dialog:openFolder"),
-  renameFolders: (path)=> ipcRenderer.invoke("rename:Folders", path)
+  renameFolders: (path) => ipcRenderer.invoke("rename:Folders", path),
 });
 
 window.addEventListener("DOMContentLoaded", () => {

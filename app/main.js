@@ -71,13 +71,15 @@ async function selectFolder() {
 }
 
 async function renameFolders(data) {
-  console.log(data);
-  fetch("http://localhost:5000/rename", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: data,
-  }).then((response) => console.log(response));
+  const resp = axios
+    .post(flaskURL + "/rename", data)
+    .then(function (response) {
+      console.log("response : " + response.data["status"]);
+      return response.data["status"];
+    })
+    .catch(function (error) {
+      console.log(error);
+      return "server error";
+    });
+  return resp;
 }

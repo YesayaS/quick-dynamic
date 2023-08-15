@@ -20,21 +20,13 @@ def add_header(response):
 
 @server.route("/")
 def landing():
-    """
-    Render index.html. Initialization is performed asynchronously in initialize() function
-    """
     return render_template("rename-folders.html")
-
 
 @server.route("/rename", methods=["POST"])
 def rename_folder():
-    print("Received POST request")
-    return jsonify({""})
-
-@server.route("/test", methods=["POST"])
-def rename_folder():
-    print("Received POST request")
-    return jsonify({})
+    status = app.rename_folder(request)
+    response = {"status": status}
+    return jsonify(response)
 
 if __name__ == '__main__':
     server.run(debug=True)
