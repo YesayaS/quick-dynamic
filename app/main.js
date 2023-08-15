@@ -29,18 +29,9 @@ const createWindow = () => {
     },
   });
 
-  // var flask = spawn("python", [path.join(__dirname, "server.py")]);
-  // flask.stdout.on("data", function (data) {
-  //   console.log("data: ", data.toString("utf8"));
-  // });
-  // flask.stderr.on("data", (data) => {
-  //   console.log(`stderr: ${data}`); // when error
-  // });
-
-  if (env === "development") win.webContents.openDevTools();
-
+  // if (env === "development") win.webContents.openDevTools();
+  // win.setMenu(null);
   win.loadURL(flaskURL);
-  win.maximize();
 };
 
 app.whenReady().then(() => {

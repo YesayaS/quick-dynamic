@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -8,28 +8,59 @@
     <link rel="stylesheet" href="../static/css/dist/style.css" />
     <link rel="stylesheet" href="../static/css/style.css" />
     <!-- develop only -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
 
-  <body>
-    <div class="flex font-mono">
-      <div class="p-9">
-        <div class="text-2xl">Quick Dynamic</div>
-        <div>Rename Folders</div>
-      </div>
-      <div class="p-9">
-        <div>Rename Folder</div>
-        <div>
-          <div>Name format :</div>
-          <div><input type="text" id="name-format" value="" /></div>
-          <div>Unique ID format :</div>
-          <div>format : [name] {id} [name]</div>
-          <div>
-            <label for="">Folder Path: </label
-            ><input type="text" id="directory-input" value="" />
-            <button id="directory-button">Folder Directory</button>
+  <body class="window-container">
+    <div class="main-items">
+      <div class="sidebar">
+        <div class="container font-bold">Quick Dynamic</div>
+        <div class="side-menus container">
+          <div class="menu"><button>Rename Folders</button></div>
+          <div class="menu">
+            <button class="disabled:opacity-25" disabled>
+              [Other features WIP]
+            </button>
           </div>
-          <div><button id="convert">convert!</button></div>
+        </div>
+      </div>
+      <div class="content container">
+        <div class="content-title">Rename Folder</div>
+        <div class="space-y-5">
+          <div>
+            <div>Name format :</div>
+            <div>
+              <input
+                type="text"
+                id="name-format"
+                value=""
+                placeholder="[name] {id} [name]"
+                class=""
+              />
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <label for="" class="flex-shrink-0">Folder Path : </label>
+            </div>
+            <div class="flex items-center justify-between">
+              <input
+                type="text"
+                id="directory-input"
+                value=""
+                placeholder="C:\directory"
+                class="mr-1"
+              />
+              <button id="directory-button" class="content-button">
+                Folder Directory
+              </button>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <button id="convert" class="content-button mt-5 px-5 font-bold">
+              Convert!
+            </button>
+          </div>
         </div>
       </div>
     </div>

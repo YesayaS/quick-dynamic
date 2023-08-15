@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  border: 0px solid red;
+}
+
+@layer base {
+  @font-face {
+    font-family: "rubik";
+    /* font-weight: 400; */
+    src: url("../assets/fonts/rubik/Rubik-Regular.ttf");
+  }
+
+  input {
+    @apply w-full border-b-2 border-main-light bg-main-dark outline-main-light p-1;
+    @apply hover:bg-main-light hover:text-main-dark hover:rounded-sm
+  }
+
+  button {
+    
+
+  }
+}
+
+@layer components {
+  .window-container {
+    @apply m-2;
+    @apply bg-window;
+    @apply font-rubik text-neutral-100;
+  }
+
+  .main-items {
+    @apply flex h-screen space-x-2;
+  }
+
+  .container {
+    @apply rounded-lg px-5 py-5;
+    @apply bg-main-dark text-main-light;
+  }
+
+  .sidebar {
+    @apply flex w-64 shrink-0 flex-col space-y-2;
+  }
+
+  .side-menus {
+    @apply h-full space-y-4;
+  }
+
+  .menu button{
+  }
+
+  .content {
+    @apply flex w-full flex-col;
+  }
+
+  .content-title {
+    @apply pb-8 text-4xl font-extrabold;
+  }
+
+  .content-body {
+  }
+
+  .content-button {
+    @apply flex-shrink-0 border-4 border-main-dark rounded-lg bg-secondary-normal px-2 py-1 text-main-dark;
+    @apply hover:bg-secondary-hover hover:border-4 hover:border-main-light
+  }
+}
